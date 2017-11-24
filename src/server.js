@@ -13,7 +13,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 // offers the function for registering a route and redirecting it to the provided server
 var appMethod = function(host, port, path, method, headers){
     app.all(path, function(req, res, next){
-        console.log("[INFO] API request on %s:%s%s send to %s:%s%s", server.address().address, server.address().port, req.originalUrl, host, port, req.originalUrl);
+        //console.log("[INFO] API request on %s:%s%s send to %s:%s%s", server.address().address, server.address().port, req.originalUrl, host, port, req.originalUrl);
         var rreq = null;        
         
         if(host.indexOf("http://") <= -1 && host.indexOf("https://") <= -1){
@@ -52,6 +52,7 @@ var server = app.listen(port, function () {
     var port = server.address().port;
 
     console.log('[INFO] listening at http://%s:%s', host, port);
+    console.log('');
 });
 
 module.exports = app;
