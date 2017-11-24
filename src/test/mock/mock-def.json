@@ -1,0 +1,21 @@
+[
+   {
+     "host":"http://localhost",
+     "port":"53000",
+     "headers":{},
+     "redirects":[
+       {
+         "path"  :"/ping",
+         "method":"get"
+       },
+       {
+         "path"  :"/posts/:id",
+         "method":"get"
+       },
+       {
+         "path"  : "/comments/:id",
+	 "method": "get"
+       }
+     ]
+   }
+]

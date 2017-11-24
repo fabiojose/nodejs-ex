@@ -1,0 +1,33 @@
+[
+   {
+      "host":"https://swapi.co",
+      "port":"443",
+      "headers":{
+      },
+      "redirects":[
+        {
+          "path":"/api/planets/:id",
+          "method":"get"
+        },
+        {
+          "path":"/api/people/:id",
+          "method":"get"
+        }
+      ]
+   },
+   {
+     "host":"http://localhost",
+     "port":"53000",
+     "headers":{},
+     "redirects":[
+       {
+         "path"  :"/ping",
+         "method":"get"
+       },
+       {
+         "path"  :"/posts/:id",
+         "method":"get"
+       }
+     ]
+   }
+]

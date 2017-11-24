@@ -1,0 +1,7 @@
+/dist/
+/node_modules/
+/src/node_modules/
+mocha-report.xml
+*.swp
+*.log
+
