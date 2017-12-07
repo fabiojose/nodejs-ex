@@ -1,3 +1,4 @@
+let assert = require("assert");
 
 describe("API Gateway", function(){
   it("Connectivity", function(done){
@@ -13,7 +14,7 @@ describe("API Gateway", function(){
       });
   });
 
-  it("GET /posts/:id", function(){
+  it("GET /posts/:id", function(done){
     request.get("/posts/1")
       .expect(200)
       .end(function(err, response){
@@ -22,13 +23,13 @@ describe("API Gateway", function(){
           return;
         }
 
-        response.body.title.should.equal("json-server");
-        done();
+	assert.equal(response.body.title, "json-server");
+	done();
       });
   });
 
   
-  it("GET /comments/:id", function(){
+  it("GET /comments/:id", function(done){
     request.get("/comments/1")
       .expect(200)
       .end(function(err, response){
@@ -37,7 +38,7 @@ describe("API Gateway", function(){
 	  return;
 	}
 
-	response.body.body.should.equal("mockup");
+	assert.equal(response.body.body, "mockup");
 	done();
       });
   });
